@@ -1,0 +1,237 @@
+.bids-card {
+  max-width: 642px;
+  min-height: 98px;
+  height: auto;
+  border: 1px solid rgba(101, 101, 101, 1);
+  border-radius: 7px !important;
+  display: flex;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+.new-nfts-card {
+  max-width: 451px;
+  min-height: 110px;
+  height: auto;
+  border: 1px solid;
+  border-radius: 4px !important;
+  display: flex;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.categories-card {
+  width: 352px;
+  height: 340px;
+  border-radius: 7px !important;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 14px 4px rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.explore-collection-card {
+  max-width: 377px;
+  height: 453px;
+  border-radius: 10px !important;
+  display: flex;
+  padding: 20px;
+  background: #ffffff;
+  justify-content: center;
+
+  box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.15);
+  &:hover {
+    box-shadow: 0px 12px 27px rgba(0, 0, 0, 0.18);
+  }
+}
+
+.trending-card {
+  max-width: 363px;
+  height: 424px;
+  border-radius: 7px !important;
+  background-color: #966ae7 !important;
+  box-shadow: 0px 4.31704px 3.45363px rgba(0, 0, 0, 0.25);
+  &:hover {
+    box-shadow: 0px 4.51704px 3.55363px rgba(0, 0, 0, 0.29);
+  }
+}
+
+.noteable-nft-card {
+  max-width: 415px;
+  height: 426px;
+  border-radius: 7px !important;
+}
+@mixin box {
+  background-color: #f1eaff !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.onsale-box {
+  width: 80px;
+  border-radius: 2px;
+  padding: 5px 10px;
+  @include box();
+}
+.onsale-box-nft {
+  width: 65px;
+  font-size: 12px;
+  border-radius: 50px;
+  height: 20px;
+  @include box();
+}
+.onsale-box-detail {
+  border-radius: 50px;
+  width: 100px;
+  @include box();
+}
+
+.activity-card {
+  max-width: 855px;
+  min-height: 86px;
+  height: "auto";
+  border-radius: 7px !important;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(101, 101, 101, 1);
+  box-shadow: none !important;
+  margin-top: 29px;
+  margin-bottom: 22px;
+  padding: 10px 10px;
+}
+
+// .nft-detail-modal{
+//   max-width: 748px;
+//   max-height: 900px;
+//   height: "auto";
+
+//   // display: flex;
+//   overflow: hidden;
+//   padding: 15px 15px;
+
+// }
+
+.card-box {
+  justify-content: center;
+  display: inline-flex;
+  width: "full";
+}
+
+.box {
+  position: relative;
+  // max-height: 506px;
+  // cursor: pointer;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  // right: 0;
+  // bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+  padding: 3px;
+  background: linear-gradient(to right, $purple, $blue);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.box:hover {
+  cursor: pointer;
+  border: 1px solid $brandpurple;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 17px;
+
+  &::before {
+    display: none;
+  }
+}
+.timer-box {
+  background: rgba(255, 255, 255, 0.87);
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: inset 0px 4px 11px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  max-width: 312px;
+  min-width: 100px;
+  height: 58px;
+}
+
+/*************** NFT Card ****************/
+.nft-card {
+  max-width: 271;
+  height: 405px;
+
+  // height: auto;
+  border-radius: 10px !important;
+  padding: 20px;
+  .nft-image .MuiBox-root {
+    height: 230px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .nft-footer {
+    display: flex;
+    flex-direction: column;
+    height: 41px;
+    padding-top: 5px;
+  }
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+.cursor {
+  cursor: "pointer";
+}
+
+.trending-home{
+  box-shadow: 0px 4px 14px 4px rgba(0, 0, 0, 0.2);
+}
+
+.top-creators{
+
+ 
+  top: 0;
+  left: 0;
+  // right: 0;
+  // bottom: 0;
+  
+  border-radius: 100px;
+  padding: 5px;
+  background: linear-gradient(to right, $purple, $blue);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+
+.disable-enable-box {
+  width: 65px;
+  font-size: 12px;
+  border-radius: 50px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+ 
+}

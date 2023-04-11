@@ -1,0 +1,122 @@
+@import "./colors";
+@import "./card";
+@import "./button";
+@import "./drop";
+@import "./image";
+.scrollBar {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+.scrollBar::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.red {
+  filter: invert(13%) sepia(94%) saturate(7466%) hue-rotate(0deg)
+    brightness(94%) contrast(115%);
+}
+
+.purple {
+  filter: invert(5%) sepia(78%) saturate(6858%) hue-rotate(276deg)
+    brightness(97%) contrast(101%);
+}
+
+.blue {
+  filter: invert(12%) sepia(63%) saturate(6234%) hue-rotate(246deg)
+    brightness(87%) contrast(156%);
+}
+
+.slick-slide.slick-active.slick-center.slick-current {
+  padding: 0px !important;
+}
+.slick-slide {
+  padding: 20px !important;
+}
+
+.background-grad {
+  background-image: linear-gradient(100.95deg, #172243 11.97%, #692adc 72.19%);
+}
+.verified-clr {
+  color: "#149CFF";
+}
+
+.react-datepicker-ignore-onclickoutside {
+  width: 100% !important;
+  height: 60px !important;
+  padding-left: 20px !important;
+  border-radius: 10px !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  border: 2px solid #692adc !important;
+}
+
+.img-render-fix {
+  image-rendering: -webkit-optimize-contrast;
+}
+.rdw-editor-toolbar {
+  background-color: #692adc !important;
+}
+.rdw-editor-main {
+  max-height: 500px !important;
+}
+.rdw-editor-main::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.rdw-link-modal {
+  height: "230px";
+}
+.public-DraftStyleDefault-block {
+  margin: 0 !important;
+}
+// .timeline {
+//   overflow: scroll !important;
+// }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.animate-div {
+  transform: scale(1);
+  transition: transform 250ms;
+}
+.animate-div:hover {
+  transform: scale(0.99);
+  transition: transform 250ms;
+}
+.animate-div:active {
+  transform: scale(0.97);
+  transition: transform 250ms;
+}
+.slider-video {
+  border-radius: 1.5;
+  cursor: "pointer";
+  max-width: "450px";
+  height: "390px";
+}
+.read-more {
+  p {
+    font-size: small;
+  }
+}
+
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: "100%";
+  padding-left:4;
+  padding-right: 4;
+}
+ 
+.verticle-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.verticle-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

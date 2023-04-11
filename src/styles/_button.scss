@@ -1,0 +1,40 @@
+button.gradient-button {
+  padding: 1rem;
+  // font-family: 'Avenir Next';
+  max-height: 50px;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+  color: #000;
+  box-shadow: 0 0 6px 0 $brandblack;
+  border: solid 3px transparent;
+  border-radius: 6px !important;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, $purple, $brandgreen);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: none;
+    color: white;
+  }
+
+  &:hover .blue-icon {
+    filter: invert(100%) brightness(100);
+  }
+
+  &:focus {
+    box-shadow: none;
+    color: white;
+  }
+}
+
+.clear-btn{
+  max-height: 50px;
+  font-size: 1rem;
+  padding: 0.4rem 1rem;
+}

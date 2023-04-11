@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["src/**/*", "pages/category-collections/CollectionCategories.js"],
+  "exclude": ["node_modules", "**/node_modules/*"]
+}

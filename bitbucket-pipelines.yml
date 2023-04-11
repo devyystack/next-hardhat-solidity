@@ -1,0 +1,46 @@
+image: python:3.7.4-alpine3.10
+pipelines:
+  branches:
+    development:
+      # tags:
+      #   ecr-release-*:
+          - step:
+              services:
+                - docker
+              caches:
+                - pip
+                - node
+                - nextcache
+              script:
+                - pip3 install awscli
+                - export TIMESTAMP="$(date +%Y%m%d)"
+                - IMAGE="404990436986.dkr.ecr.ap-southeast-1.amazonaws.com/dstage-frontend-dev"
+                - aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
+                - aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
+                - eval $(aws ecr get-login --no-include-email --region ap-southeast-1 | sed 's;https://;;g')
+                - docker build -t $IMAGE:latest .
+                - docker push $IMAGE:latest
+                - aws ecs update-service --cluster dstage-frontend-dev-cluster --service dstage-frontend-dev-service --force-new-deployment --region ap-southeast-1
+    master:
+      # tags:
+      #   ecr-release-*:
+          - step:
+              services:
+                - docker
+              caches:
+                - pip
+                - node
+                - nextcache
+              script:
+                - pip3 install awscli
+                - export TIMESTAMP="$(date +%Y%m%d)"
+                - IMAGE="404990436986.dkr.ecr.ap-southeast-1.amazonaws.com/dstage-frontend-prod"
+                - aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
+                - aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
+                - eval $(aws ecr get-login --no-include-email --region ap-southeast-1 | sed 's;https://;;g')
+                - docker build -t $IMAGE:latest .
+                - docker push $IMAGE:latest
+                - aws ecs update-service --cluster dstage-frontend-prod-cluster --service dstage-frontend-prod-service --force-new-deployment --region ap-southeast-1
+definitions:
+  caches:
+    nextcache: .next/cache
